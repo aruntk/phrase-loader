@@ -1,5 +1,7 @@
 # \<phrase-loader\>
 
+[DEMO](http://aruntk.github.io/phrase-loader/)
+
 polymer phrase loader
 
 ## Install the Polymer-CLI
