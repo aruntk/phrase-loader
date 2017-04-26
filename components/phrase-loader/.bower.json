@@ -1,0 +1,47 @@
+{
+  "name": "phrase-loader",
+  "description": "polymer phrase loader",
+  "main": "lib/phrase-loader.html",
+  "authors": [
+    "aruntk"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "polymer",
+    "phrase",
+    "corange",
+    "loader"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.3.7",
+    "paper-styles": "PolymerElements/paper-styles#^1.2.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "app-layout": "PolymerElements/app-layout#^1.0.1"
+  },
+  "homepage": "https://github.com/aruntk/phrase-loader",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "demo"
+  ],
+  "_release": "9667d02777",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9667d027777d4c03b61ee13283dbfeb9e2fdf6e9"
+  },
+  "_source": "https://github.com/aruntk/phrase-loader.git",
+  "_target": "master",
+  "_originalSource": "aruntk/phrase-loader",
+  "_direct": true
+}

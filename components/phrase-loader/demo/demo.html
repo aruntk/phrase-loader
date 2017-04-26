@@ -1,0 +1,91 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../../app-layout/app-header/app-header.html">
+<link rel="import" href="../../app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../phrase-loader.html">
+
+<dom-module id="demo-element">
+  <style>
+:host {
+  height: 300px;
+  width: 100%;
+}
+app-header-layout {
+
+}
+app-header {
+  z-index: 12;
+  background-color: #3f51b5;
+  color: #ffffff;
+}
+    .content {
+      height: 500px;
+    }
+  </style>
+  <template>
+    <app-header-layout class="fit">
+      <app-header fixed condenses>
+        <app-toolbar>
+          [[showText]] Loader <input type="checkbox" checked="{{active::change}}" />
+          Loop (experimental) <input type="checkbox" checked="{{loop::change}}" />
+          Shuffle <input type="checkbox" checked="{{shuffle::change}}" />
+        </app-toolbar>
+      </app-header>
+      <div class="content">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+        <phrase-loader active="[[active]]"
+                       phrases="[[phrases]]"
+                       loop="[[loop]]"
+                       shuffle="[[shuffle]]">
+        </phrase-loader>
+      </div>
+    </app-header-layout>
+  </template>
+</dom-module>
+<script>
+Polymer({
+  is: 'demo-element',
+  properties: {
+    active: Boolean,
+    phrases: {
+      type: Array,
+      value: [
+        'Feeding unicorns',
+        'Grabbing tasks',
+        'Collating conversations',
+        'Reticulating splines',
+        'Pondering emptiness',
+        'Considering alternatives',
+        'Shuffling bits',
+        'Celebrating moments',
+        'Generating phrases',
+        'Simulating workflow',
+        'Empowering humanity',
+        'Being aspirational',
+        'Doing the hokey pokey',
+        'Bueller',
+        'Cracking jokes',
+        'Slacking off'
+      ],
+    },
+    loop: {
+      type: Boolean,
+      value: false,
+    },
+    shuffle: {
+      type: Boolean,
+      value: true,
+    },
+    showText: {
+      type: String,
+      computed: '_getShowText(active)',
+    }
+  },
+  _getShowText(a) {
+    return a ? 'Hide' : 'Show';
+  },
+  ready() {
+    this.active = false;
+  }
+});
+</script>
