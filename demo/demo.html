@@ -27,10 +27,8 @@ app-header {
       <app-header fixed condenses>
         <app-toolbar>
           [[showText]] Loader <input type="checkbox" checked="{{active::change}}" />
-          <template is="dom-if" if="[[active]]">
-            Loop (experimental) <input type="checkbox" checked="{{loop::change}}" />
-            Shuffle <input type="checkbox" checked="{{shuffle::change}}" />
-          </template>
+          Loop (experimental) <input type="checkbox" checked="{{loop::change}}" />
+          Shuffle <input type="checkbox" checked="{{shuffle::change}}" />
         </app-toolbar>
       </app-header>
       <div class="content">
